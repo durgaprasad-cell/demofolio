@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home · DemoFolio</title><link rel="stylesheet" href="/style.css"></head><body>
+<div class="banner">Simulation only: virtual money, fake data, no real investments or returns.</div>
+<header><a class="brand" href="/">Demo<span>Folio</span></a><nav>
+<a href="/index" aria-current="page">Home</a>
+<a href="/overview">Overview</a>
+<a href="/services">Services</a>
+<a href="/features">Features</a>
+<a href="/locations">Locations</a>
+<a href="/plans">Plans</a>
+<a href="/terms">Terms</a>
+<a href="/contact">Contact</a>
+</nav></header><main>
+<h1>Practice trading with virtual money.</h1><p>DemoFolio is a paper-trading simulator. Every balance and price here is made up, so you can learn how markets work, and how to ship software, without risking a cent.</p><div class="card"><strong>Live demo data</strong><pre id="out">Loading portfolio…</pre><button onclick="load()">Refresh</button></div><script>async function load(){try{const r=await fetch("/api/portfolio");document.getElementById("out").textContent=JSON.stringify(await r.json(),null,2)}catch(e){document.getElementById("out").textContent="Could not reach the API. Check that the server is running."}}load()</script>
+</main><footer>DemoFolio is a practice project for learning DevOps. It is not a financial product.</footer></body></html>

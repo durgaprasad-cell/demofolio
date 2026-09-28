@@ -1,0 +1,23 @@
+:root{--bg:#eef2f5;--ink:#10202b;--muted:#4b5d6b;--teal:#0e7c86;--amber:#e0a100;--panel:#fff;--line:#cfd9e0}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1a22;--ink:#e6eef3;--muted:#9db0bd;--panel:#16252f;--line:#294050;--teal:#3cc0cc}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,"Times New Roman",serif}
+header{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-bottom:2px solid var(--ink)}
+.brand{font:700 1.4rem system-ui,sans-serif;color:var(--ink);text-decoration:none}
+.brand span{color:var(--teal)}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;font:500 .95rem system-ui,sans-serif}
+nav a{color:var(--muted);text-decoration:none;padding:.2rem 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current]{color:var(--ink);border-color:var(--amber)}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+main{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+h1{font:800 clamp(2rem,5vw,3.2rem)/1.1 system-ui,sans-serif;margin:0 0 1rem}
+h2{font:700 1.3rem system-ui,sans-serif;margin-top:2.2rem}
+.banner{background:var(--amber);color:#10202b;font:600 .9rem system-ui,sans-serif;padding:.5rem 1.5rem;text-align:center}
+table{width:100%;border-collapse:collapse;background:var(--panel);margin:1rem 0}
+th,td{text-align:left;padding:.6rem .8rem;border-bottom:1px solid var(--line);font:.95rem system-ui,sans-serif}
+th{background:var(--ink);color:var(--bg)}
+.card{background:var(--panel);border:1px solid var(--line);padding:1rem 1.2rem;margin:.8rem 0}
+footer{border-top:1px solid var(--line);padding:1.2rem 1.5rem;text-align:center;color:var(--muted);font:.85rem system-ui,sans-serif}
+button{font:600 1rem system-ui,sans-serif;background:var(--teal);color:#fff;border:0;padding:.6rem 1.1rem;cursor:pointer}
+button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+pre{background:var(--panel);border:1px solid var(--line);padding:1rem;overflow-x:auto}
