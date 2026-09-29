@@ -16,12 +16,15 @@
 body{margin:0;background:var(--void);color:var(--ink);font:17px/1.6 var(--body)}
 .banner{display:flex;justify-content:center;gap:.65rem;flex-wrap:wrap;background:var(--gold);color:#11130e;padding:.45rem 1rem;text-align:center;font:800 .78rem var(--display);letter-spacing:.04em}
 .banner strong{color:#05090f}
-header{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1rem max(1.5rem,calc((100% - 1360px)/2));border-bottom:1px solid #785a1f;background:#05090fee}
+header{display:flex;flex-direction:column;gap:.8rem;padding:1rem max(1.5rem,calc((100% - 1360px)/2));border-bottom:1px solid #785a1f;background:#05090fee}
+.header-top{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
 .brand{display:flex;align-items:center;gap:.8rem;flex:0 0 auto;color:var(--gold-light);text-decoration:none}
-.brand-mark{display:grid;width:48px;height:48px;place-items:center;border:1px solid var(--gold);border-radius:9px;background:#111722;color:var(--gold);font:900 1rem var(--display);box-shadow:0 0 18px #f5c34835,inset 0 0 14px #f5c34812}
-.brand-name{font:900 1.45rem/1 var(--display);letter-spacing:0;color:#fff}
-.brand-name>span{color:var(--gold)}
-.brand-name small{display:block;margin-top:.38rem;color:var(--gold);font:700 .56rem var(--display);letter-spacing:.2em}
+.brand-mark{display:grid;width:52px;height:52px;place-items:center;border:1px solid var(--gold);border-radius:9px;background:#111722;color:var(--gold);font:900 .82rem var(--display);box-shadow:0 0 18px #f5c34835,inset 0 0 14px #f5c34812}
+.brand-name{font:900 1.16rem/1.1 var(--display);letter-spacing:0;color:#fff}
+.brand-name small{display:block;margin-top:.38rem;color:var(--gold);font:700 .62rem var(--display);letter-spacing:.2em}
+.header-contact{display:flex;align-items:center;gap:.65rem;font:800 .75rem var(--display)}
+.header-contact span,.header-contact a{display:flex;align-items:center;gap:.55rem;min-height:42px;padding:.45rem .8rem;border:1px solid var(--gold);border-radius:24px;color:#f8f6ed;text-decoration:none;box-shadow:0 0 14px #f5c34820}
+.header-contact small{color:var(--cyan);font-size:.95rem}
 nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.45rem;font:700 .82rem var(--display)}
 nav a{padding:.38rem .64rem;border:1px solid #293544;border-radius:3px;color:#e1e8ed;text-decoration:none}
 nav a:hover,nav a[aria-current]{border-color:var(--gold);color:var(--gold-light);box-shadow:0 0 12px #f5c34827}
@@ -49,8 +52,9 @@ pre{background:var(--panel);border:1px solid #69521d;padding:1rem;overflow-x:aut
 .hero-copy{max-width:660px}
 .eyebrow{display:inline-flex;align-items:center;gap:.6rem;margin:0 0 1.35rem;padding:.55rem .8rem;border:1px solid #c39435;border-left:4px solid var(--cyan);background:#081a2b;color:var(--gold-light);font:800 .75rem var(--display);letter-spacing:.1em;text-transform:uppercase}
 .eyebrow-mark{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
-.hero h1{margin:0 0 .7rem;font-size:4.2rem;line-height:1.03;text-transform:uppercase;text-shadow:0 3px 20px #000}
+.hero h1{margin:0 0 .7rem;font-size:3.55rem;line-height:1.03;text-transform:uppercase;text-shadow:0 3px 20px #000}
 .hero h1 span{color:var(--gold);text-shadow:0 0 22px #f5c34848}
+.hero h1 span{display:block}
 .hero-motto{margin:.7rem 0 1.15rem!important;color:var(--gold-light)!important;font:800 .84rem var(--display)!important;letter-spacing:.2em;text-transform:uppercase}
 .hero-copy>p:not(.eyebrow):not(.hero-motto){max-width:570px;margin:0;color:#e0e8ee;font-size:1.08rem;text-shadow:0 1px 6px #000}
 .hero-copy>p strong{color:var(--cyan);font-family:var(--display)}
@@ -68,6 +72,8 @@ pre{background:var(--panel);border:1px solid #69521d;padding:1rem;overflow-x:aut
 .coin-emblem::after{inset:21px;border-color:#16d9ef88}
 .coin-monogram{z-index:1;color:var(--gold);font:900 5rem/1 var(--display);text-shadow:0 0 20px #f5c348b0}
 .coin-caption{margin:0;color:var(--gold-light);font:800 .69rem var(--display);letter-spacing:.24em;text-align:center}
+.asset-strip{display:grid;width:min(100%,470px);grid-template-columns:repeat(4,minmax(0,1fr));gap:.4rem}
+.asset-strip span{display:grid;min-height:45px;place-items:center;border:1px solid #b68b36;border-radius:3px;background:#081522;color:#f4d37c;font:800 .68rem var(--display);letter-spacing:.07em;box-shadow:inset 0 0 12px #e5b84a12}
 .portfolio-card{width:min(100%,470px);overflow:hidden;border:1px solid #bd933e;border-radius:4px;padding:1.1rem 1.25rem;background:#07111deF;color:#f7f9fa;box-shadow:0 0 24px #000b,0 0 14px #d6a83a20}
 .portfolio-top{display:flex;justify-content:space-between;align-items:center;gap:1rem}
 .portfolio-label{font:800 .68rem var(--display);letter-spacing:.12em;color:#dce7ec}
@@ -100,7 +106,8 @@ pre{background:var(--panel);border:1px solid #69521d;padding:1rem;overflow-x:aut
 .highlight h2{margin:.45rem 0 .3rem;font-size:1rem;color:var(--gold-light)}
 .highlight p{margin:0;color:#b5c2cc;font-size:.82rem}
 @media(max-width:950px){
-	header{align-items:flex-start;flex-direction:column;gap:.8rem;padding:1rem 1.25rem}
+	header{align-items:stretch;padding:1rem 1.25rem}
+	.header-top{align-items:flex-start}
 	nav{justify-content:flex-start}
 	.hero{grid-template-columns:1fr;gap:2.5rem;padding:3.5rem 1.5rem}
 	.hero-copy{max-width:700px}
@@ -109,6 +116,10 @@ pre{background:var(--panel);border:1px solid #69521d;padding:1rem;overflow-x:aut
 }
 @media(max-width:600px){
 	.banner{font-size:.68rem}
+	.header-top{align-items:flex-start;flex-direction:column;gap:.9rem}
+	.brand-name{font-size:1rem}
+	.header-contact{flex-wrap:wrap}
+	.header-contact span,.header-contact a{min-height:38px;padding:.35rem .65rem;font-size:.68rem}
 	nav{gap:.35rem}
 	nav a{padding:.32rem .48rem;font-size:.74rem}
 	main:not(.home-main){padding:2rem 1rem 3rem}
@@ -116,11 +127,12 @@ pre{background:var(--panel);border:1px solid #69521d;padding:1rem;overflow-x:aut
 	.hero-art{object-position:57% center;opacity:.27}
 	.hero-shade{background:rgba(3,8,16,.7)}
 	.eyebrow{font-size:.63rem;letter-spacing:.06em}
-	.hero h1{font-size:3rem}
+	.hero h1{font-size:2.65rem}
 	.hero-copy>p:not(.eyebrow):not(.hero-motto){font-size:.98rem}
 	.hero-actions{gap:1rem}
 	.coin-emblem{width:170px}
 	.coin-monogram{font-size:4rem}
+	.asset-strip span{font-size:.58rem}
 	.portfolio-card{padding:.95rem}
 	.balance-value{font-size:1.85rem}
 	.highlights{grid-template-columns:1fr}

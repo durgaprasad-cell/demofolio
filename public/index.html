@@ -1,14 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home · DemoFolio</title><link rel="stylesheet" href="style.css"></head><body>
-<div class="banner"><strong>SIMULATION ONLY</strong><span>Virtual money · fictional prices · no real investments or returns</span></div>
-<header><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">DF</span><span class="brand-name">Demo<span>Folio</span><small>SIMULATE · STRATEGIZE · SHIP</small></span></a><nav aria-label="Primary navigation">
+<title>UTC | United Trading Company</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="banner"><strong>UTC SANDBOX PREVIEW</strong><span>Real-money trading is not enabled · Market values shown are simulated</span></div>
+<header><div class="header-top"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">UTC</span><span class="brand-name">UNITED TRADING COMPANY<small>TRADE · CONNECT · TRANSFORM</small></span></a><div class="header-contact"><span><small>LOCATION</small>Dubai, UAE</span><a href="https://www.utc.asia"><small>WEB</small>www.utc.asia</a></div></div><nav aria-label="Primary navigation">
 <a href="index.html" aria-current="page">Home</a>
-<a href="overview.html">Overview</a>
+<a href="overview.html">About</a>
 <a href="services.html">Services</a>
-<a href="features.html">Features</a>
+<a href="features.html">Markets</a>
 <a href="locations.html">Locations</a>
-<a href="plans.html">Plans</a>
-<a href="terms.html">Terms</a>
+<a href="plans.html">Sandbox</a>
+<a href="terms.html">Risk notice</a>
 <a href="contact.html">Contact</a>
 </nav></header>
 <main class="home-main">
@@ -16,24 +16,25 @@
 		<img class="hero-art" src="images/market-floor.jpg" alt="" fetchpriority="high">
 		<div class="hero-shade" aria-hidden="true"></div>
 		<div class="hero-copy">
-			<p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Premier global paper-trading simulator</p>
-			<h1 id="hero-title">Welcome to<br><span>DemoFolio</span></h1>
-			<p class="hero-motto">Practice <span aria-hidden="true">·</span> Learn <span aria-hidden="true">·</span> Grow</p>
-			<p>Explore market moves with a portfolio powered by <strong>virtual money</strong> and fictional prices. Learn the rhythm of trading, with no real trades and no financial risk.</p>
+			<p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Premier multi-asset trading experience</p>
+			<h1 id="hero-title">Welcome to<br><span>United Trading<br>Company</span></h1>
+			<p class="hero-motto">Trade <span aria-hidden="true">·</span> Connect <span aria-hidden="true">·</span> Transform</p>
+			<p>Explore a multi-asset trading experience across USDT, cryptocurrency, crude oil, and equities. This preview is in sandbox mode: <strong>real trades, deposits, and withdrawals are not available.</strong></p>
 			<div class="hero-actions">
-				<a class="button-link" href="plans.html">Explore practice plans <span aria-hidden="true">&#8594;</span></a>
-				<a class="text-link" href="overview.html">Discover how it works</a>
+				<a class="button-link" href="overview.html">Discover UTC <span aria-hidden="true">&#8594;</span></a>
+				<a class="text-link" href="#sandbox-preview">View sandbox preview</a>
 			</div>
-			<div class="trust-note"><span class="trust-star" aria-hidden="true">&#10022;</span><span><strong>Simulation only.</strong> All balances and prices are made up.</span></div>
+			<div class="trust-note"><span class="trust-star" aria-hidden="true">&#10022;</span><span><strong>Sandbox preview.</strong> No broker or payment provider is connected.</span></div>
 		</div>
 
 		<div class="hero-showcase">
-			<div class="coin-emblem" aria-hidden="true"><span class="coin-monogram">DF</span></div>
-			<p class="coin-caption">TRADE · CONNECT · LEARN</p>
-			<section class="portfolio-card" aria-label="Simulated practice portfolio">
+			<div class="coin-emblem" aria-hidden="true"><span class="coin-monogram">UTC</span></div>
+			<p class="coin-caption">UNITED TRADING COMPANY</p>
+			<div class="asset-strip" aria-label="Featured asset classes"><span>USDT</span><span>CRYPTO</span><span>OIL</span><span>STOCKS</span></div>
+			<section class="portfolio-card" id="sandbox-preview" aria-label="Sandbox portfolio preview">
 				<div class="portfolio-top">
-					<span class="portfolio-label">YOUR PRACTICE PORTFOLIO</span>
-					<span class="simulation-chip">SIMULATED</span>
+					<span class="portfolio-label">SANDBOX PORTFOLIO PREVIEW</span>
+					<span class="simulation-chip">NOT LIVE</span>
 				</div>
 				<p class="balance-label">Total simulated value</p>
 				<p class="balance-value" id="portfolio-total">$2,764.00</p>
@@ -48,26 +49,26 @@
 					<li class="holding-row"><span class="holding-name"><span class="holding-swatch" aria-hidden="true"></span><span><span class="holding-symbol">DEMO-B</span><span class="holding-quantity">4 shares</span></span></span><span class="holding-value">$1,000.00</span></li>
 					<li class="holding-row"><span class="holding-name"><span class="holding-swatch" aria-hidden="true"></span><span><span class="holding-symbol">DEMO-C</span><span class="holding-quantity">30 shares</span></span></span><span class="holding-value">$546.00</span></li>
 				</ol>
-				<p class="portfolio-note">Fictional values for practice only.</p>
-				<div class="portfolio-controls"><button type="button" id="refresh-button">Refresh holdings</button><span class="data-status" id="data-status" role="status">Demo data ready</span></div>
+				<p class="portfolio-note">Illustrative values only. No real funds or market prices.</p>
+				<div class="portfolio-controls"><button type="button" id="refresh-button">Refresh preview</button><span class="data-status" id="data-status" role="status">Sandbox data ready</span></div>
 			</section>
 		</div>
 	</section>
 
 	<section class="highlights" aria-label="Practice features">
-		<article class="highlight"><span class="highlight-number">01 / LEARN</span><h2>Explore at your pace</h2><p>Get familiar with portfolio basics in a no-pressure environment.</p></article>
-		<article class="highlight"><span class="highlight-number">02 / PRACTICE</span><h2>Try a strategy</h2><p>Use simulated holdings to understand how different positions behave.</p></article>
-		<article class="highlight"><span class="highlight-number">03 / BUILD</span><h2>See how it ships</h2><p>Explore the app’s monitoring and deployment tools alongside the demo.</p></article>
+		<article class="highlight"><span class="highlight-number">01 / ASSET CLASSES</span><h2>Explore multiple markets</h2><p>USDT, cryptocurrency, crude oil, and equities are shown as sandbox categories.</p></article>
+		<article class="highlight"><span class="highlight-number">02 / RISK AWARENESS</span><h2>Understand the risks</h2><p>Trading involves risk. Simulated examples do not predict real outcomes.</p></article>
+		<article class="highlight"><span class="highlight-number">03 / TRANSPARENCY</span><h2>Sandbox, clearly marked</h2><p>No broker, exchange, payment, or KYC provider is connected to this preview.</p></article>
 	</section>
 </main>
-<footer>DemoFolio is a practice project for learning DevOps. It is not a financial product. Hero photograph via <a href="https://unsplash.com/license">Unsplash</a>.</footer>
+<footer>UTC sandbox preview. Real-money trading, deposits, and withdrawals are not available. Prices and balances are simulated, and this page is not financial advice. Hero photograph via <a href="https://unsplash.com/license">Unsplash</a>.</footer>
 <script>
 	const currency = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
 	const refreshButton = document.getElementById("refresh-button");
 
 	async function loadPortfolio() {
 		refreshButton.disabled = true;
-		document.getElementById("data-status").textContent = "Refreshing demo data...";
+		document.getElementById("data-status").textContent = "Refreshing sandbox data...";
 
 		try {
 			const response = await fetch("api/portfolio.json");
@@ -117,9 +118,9 @@
 			});
 			allocation.replaceChildren(...segments);
 			allocation.setAttribute("aria-label", holdings.map((holding, index) => `${holding.symbol}: ${total ? Math.round((values[index] / total) * 100) : 0}%`).join(", "));
-			document.getElementById("data-status").textContent = "Demo data updated";
+			document.getElementById("data-status").textContent = "Sandbox data updated";
 		} catch {
-			document.getElementById("data-status").textContent = "Could not load demo data";
+			document.getElementById("data-status").textContent = "Could not load sandbox data";
 		} finally {
 			refreshButton.disabled = false;
 		}

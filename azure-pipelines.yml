@@ -66,7 +66,7 @@ stages:
 
                 - task: CopyFilesOverSSH@0
                   inputs:
-                    sshEndpoint: Linux_deployment
+                    sshEndpoint: e480c45f-99c3-4bd3-9b08-37a94f83d5bf
                     sourceFolder: $(Pipeline.Workspace)/image
                     contents: demofolio.tar
                     targetFolder: $(vmDeployPath)
@@ -75,11 +75,19 @@ stages:
 
                 - task: SSH@0
                   inputs:
-                    sshEndpoint: Linux_deployment
+                    sshEndpoint: e480c45f-99c3-4bd3-9b08-37a94f83d5bf
                     runOptions: inline
                     inline: |
                       docker load -i $(vmDeployPath)/demofolio.tar
-                      docker rm -f demofolio || true
+                      if docker container inspect demofolio >/dev/null 2>&1; then
+                        docker rm -f demofolio
+                      fi
                       docker run -d --name demofolio --restart unless-stopped -p $(vmPort):3000 demofolio:$(Build.BuildId)
                       rm -f $(vmDeployPath)/demofolio.tar
+                    interpreterCommand: /bin/bash
+                    failOnStdErr: true
+                    interactiveSession: false
+                    readyTimeout: '20000'
+                    interactiveKeyboardAuthentication: false
+                    enableRemoteVsoCommands: false
                   displayName: Restart DemoFolio container
